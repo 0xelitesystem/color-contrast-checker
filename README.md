@@ -13,9 +13,22 @@ It runs entirely in the browser. Nothing is uploaded, stored, or tracked.
 - A live swatch showing the text color on the background color
 - A plain-language note on where the pair is safe to use
 
-## How to use
+## Use
 
 Open `index.html` in any browser, or visit the GitHub Pages URL. Pick each color with the swatch or type a hex value, and the ratio and the pass or fail chips update live. Use the swap button to flip text and background. Large text means roughly 24px and up, or 18.66px and up if bold.
+
+1. Pick the text color with its swatch, or type a hex value.
+2. Pick the background color the same way.
+3. Read the ratio and the AA and AAA pass or fail chips for normal and large text.
+4. Click "Swap colors" to check the pair the other way round.
+
+## Why this exists
+
+Checking a color pair against WCAG should take seconds and should not mean loading a page full of trackers. This is one HTML file that computes the ratio in your browser, with no tracking, released under the MIT license.
+
+## Privacy
+
+Everything runs in your browser. The colors you enter are never sent anywhere and are not saved. The page makes no network requests and stores nothing in localStorage, sessionStorage, or cookies.
 
 ## Notes
 
@@ -24,6 +37,19 @@ The ratio uses the standard WCAG relative-luminance formula. AA requires at leas
 ## More
 
 Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
+
+## Run locally
+
+```
+git clone https://github.com/0xelitesystem/color-contrast-checker
+cd color-contrast-checker
+```
+
+Open `index.html` in a browser, or serve the folder with `python -m http.server 8000` and visit http://localhost:8000.
+
+## Build
+
+No build step. The whole tool is one `index.html` file with inline CSS and JavaScript.
 
 ## Third-party notices
 
